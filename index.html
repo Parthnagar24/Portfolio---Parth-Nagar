@@ -17,16 +17,16 @@
         --bg-card: #ffffff;
         --text-primary: #1e293b;
         --text-secondary: #64748b;
-        --accent-primary: #6366f1;
-        --accent-secondary: #8b5cf6;
-        --accent-hover: #4f46e5;
+        --accent-primary: #10b981; /* A nice, vibrant green */
+        --accent-secondary: #06b6d4; /* A cool, complementary teal */
+        --accent-hover: #047857; /* A darker green for hover effects */
         --border: #e2e8f0;
         --shadow: rgba(0, 0, 0, 0.1);
         --glass-bg: rgba(255, 255, 255, 0.8);
         --glass-border: rgba(255, 255, 255, 0.3);
-        --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        --gradient-1: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+        --gradient-2: linear-gradient(135deg, #38d6a8 0%, #20b9e8 100%);
+        --gradient-3: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
       }
 
       [data-theme="dark"] {
@@ -35,9 +35,9 @@
         --bg-card: #1e293b;
         --text-primary: #f1f5f9;
         --text-secondary: #94a3b8;
-        --accent-primary: #818cf8;
-        --accent-secondary: #a78bfa;
-        --accent-hover: #6366f1;
+        --accent-primary: #34d399; /* Lighter green for dark mode */
+        --accent-secondary: #22d3ee;
+        --accent-hover: #10b981;
         --border: #334155;
         --shadow: rgba(0, 0, 0, 0.5);
         --glass-bg: rgba(30, 41, 59, 0.8);
@@ -486,13 +486,11 @@
       }
 
       .certificate-card img {
-  width: 100%;
-  height: auto;   /* Adjust height automatically */
-  object-fit: contain; /* Ensures full image is visible */
-  background: #f0f0f0; /* Optional: background color for empty space */
-}
-
-
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        background: #f0f0f0;
+      }
 
       .certificate-content {
         padding: 1.5rem;
@@ -608,20 +606,16 @@
         color: var(--accent-hover);
         transform: translateX(5px);
       }
-    .project-card img {
-  width: 260px;        /* rectangle width */
-  height: 200px;        /* rectangle height */
-  border-radius: 10px; /* small rounded corners (optional) */
-  object-fit: cover;   /* fills rectangle without distortion */
-  margin-bottom: 1rem; /* space below the image */
-  display: block;
-  margin-left: auto;   /* center horizontally */
-  margin-right: auto;  /* center horizontally */
-}
-
-
-
-
+      .project-card img {
+        width: 260px;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
       /* Experience Section */
       .experience-timeline {
@@ -914,6 +908,7 @@
         background: var(--bg-secondary);
         border-radius: 15px;
         transition: all 0.3s ease;
+        margin-bottom: 1.5rem;
       }
 
       .contact-info a:hover {
@@ -922,10 +917,28 @@
         transform: translateY(-5px);
       }
 
+      /* Social Icons Row */
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .social-links a {
+        color: var(--text-secondary);
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: var(--accent-primary);
+        transform: translateY(-3px);
+      }
+
       /* Footer */
       footer {
         background: var(--bg-secondary);
-        padding: 4rem 5% 2rem;
+        padding: 2rem 5% 1rem;
         margin-top: 2rem;
         border-top: 1px solid var(--border);
       }
@@ -936,7 +949,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 3rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
 
       .footer-section h3 {
@@ -975,7 +988,7 @@
 
       .footer-bottom {
         text-align: center;
-        padding-top: 2rem;
+        padding-top: 1rem;
         border-top: 1px solid var(--border);
         color: var(--text-secondary);
       }
@@ -1118,14 +1131,12 @@
     </style>
   </head>
   <body>
-    <!-- Animated Background -->
     <div class="bg-animation">
       <div class="bg-circle"></div>
       <div class="bg-circle"></div>
       <div class="bg-circle"></div>
     </div>
 
-    <!-- Navigation -->
     <nav id="navbar">
       <div class="nav-container">
         <div class="logo">Portfolio</div>
@@ -1141,18 +1152,19 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-container">
         <div class="hero-content">
           <h1>Hi, I'm <span class="gradient-text">Parth Nagar</span></h1>
           <div class="typing-animation">
-  <p>🚀 Full Stack Developer</p>
-  <p>🤖 AI & ML Enthusiast</p>
-  <p>📊 Aspiring Data Analyst</p>
-  <p>💡 Problem Solver & Creative Thinker</p>
-  <p>📚 Lifelong Learner & Tech Enthusiast</p>
-</div>
+            <p>
+              A dedicated Full Stack Developer with expertise in the MERN stack.
+              Passionate about Artificial Intelligence and Machine Learning. An
+              aspiring Data Analyst with a focus on problem-solving. A creative
+              thinker committed to building innovative solutions. A lifelong
+              learner who is always eager to expand my technical knowledge.
+            </p>
+          </div>
 
           <div class="cta-buttons">
             <a href="#projects" class="btn-primary">View My Work</a>
@@ -1168,7 +1180,6 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
       <div class="section-title-wrapper">
         <h2 class="gradient-underline">About Me</h2>
@@ -1230,11 +1241,11 @@
           <div class="skill-name">Microsoft Office</div>
         </div>
         <div class="skill-item">
-          <div class="skill-icon">💚</div>
+          <div class="skill-icon">💡</div>
           <div class="skill-name">Node.js</div>
         </div>
         <div class="skill-item">
-          <div class="skill-icon">💚</div>
+          <div class="skill-icon">💡</div>
           <div class="skill-name">Express.js</div>
         </div>
         <div class="skill-item">
@@ -1284,7 +1295,6 @@
       </div>
     </section>
 
-    <!-- Certificates Section -->
     <section id="certificates">
       <div class="section-title-wrapper">
         <h2 class="gradient-underline">Certificates & Achievements</h2>
@@ -1342,7 +1352,7 @@
               Covered key concepts in AI services, model training, integration,
               and enterprise-scale applications.”
             </p>
-            <span class="certificate-badge">2025-2027<span>
+            <span class="certificate-badge">2025-2027</span>
           </div>
         </div>
         <div class="certificate-card">
@@ -1398,7 +1408,6 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience">
       <div class="section-title-wrapper">
         <h2 class="gradient-underline">Professional Experience</h2>
@@ -1458,7 +1467,6 @@
       </div>
     </section>
 
-    <!-- GitHub Projects Section -->
     <section id="projects">
       <div class="section-title-wrapper">
         <h2 class="gradient-underline">Featured Projects</h2>
@@ -1466,14 +1474,19 @@
           Explore my latest work and open-source contributions
         </p>
       </div>
+
       <div class="projects-grid">
+        <!-- Project 1 -->
         <div class="project-card">
-            <img src="images/Screenshot 2025-10-02 105802.png" alt="">
+          <img
+            src="images/Screenshot 2025-10-02 105802.png"
+            alt="Task Manager App"
+          />
           <h3>Task Manager (Todo List)</h3>
           <p>
-            “A simple, responsive web app to add, view, and delete tasks with
+            A simple, responsive web app to add, view, and delete tasks with
             light/dark mode. Built with HTML, CSS & JavaScript, storing tasks in
-            the browser.”
+            the browser.
           </p>
           <div class="tech-stack">
             <span class="tech-tag">HTML</span>
@@ -1482,24 +1495,26 @@
           </div>
           <div class="project-links">
             <a
-              href=" https://github.com/Parthnagar24/Todo-List-Project"
+              href="https://github.com/Parthnagar24/Todo-List-Project"
               target="_blank"
-              >🔗Github Repo</a
+              >🔗 GitHub</a
             >
             <a
               href="https://parthnagar24.github.io/Todo-List-Project"
               target="_blank"
-              >🚀 Live/</a
+              >🔗 Visit Site</a
             >
           </div>
         </div>
+
+        <!-- Project 2 -->
         <div class="project-card">
-            <img src="images/mini.png" alt="">
+          <img src="images/mini.png" alt="Mini Profile Manager" />
           <h3>Mini Profile Manager (React + TypeScript)</h3>
           <p>
-            “A React + TypeScript app with Info, Themes, and Addresses tabs.
+            A React + TypeScript app with Info, Themes, and Addresses tabs.
             Features email/phone validation, dynamic theme via mock API,
-            collapsible addresses, and JSON preview on save.”
+            collapsible addresses, and JSON preview on save.
           </p>
           <div class="tech-stack">
             <span class="tech-tag">React</span>
@@ -1510,13 +1525,17 @@
             <a
               href="https://github.com/Parthnagar24/mini-profile-manager"
               target="_blank"
-              >🔗Github Repo</a
+              >🔗 GitHub</a
             >
-            <p>Visit Github Repository for setup instructions</p>
           </div>
         </div>
+
+        <!-- Project 3 -->
         <div class="project-card">
-            <img src="images/Screenshot 2025-09-21 191635.png" alt="">
+          <img
+            src="images/Screenshot 2025-09-21 191635.png"
+            alt="CAPE-X Project"
+          />
           <h3>CAPE-X (SIH Project) 2025</h3>
           <p>
             Automated crater detection and analysis on planetary surfaces using
@@ -1536,17 +1555,17 @@
           </div>
         </div>
 
+        <!-- Project 4 -->
         <div class="project-card">
-            <img src="images/zzigy.png" alt="">
+          <img src="images/zzigy.png" alt="Zziggy Food Delivery App" />
           <h3>Zziggy Food Delivery App (Full Stack)</h3>
           <p>
-            “A full-stack food delivery web application built with the MERN
-            stack (MongoDB, Express, React, Node.js). Features include user and
-            admin panels, JWT authentication, Stripe payments, and a responsive
-            UI.”
+            A full-stack food delivery web application built with the MERN stack
+            (MongoDB, Express, React, Node.js). Features include user and admin
+            panels, JWT authentication, Stripe payments, and a responsive UI.
           </p>
           <div class="tech-stack">
-            <span class="tech-tag">Frontend:React.js</span>
+            <span class="tech-tag">Frontend: React.js</span>
             <span class="tech-tag">Backend: Node.js with Express</span>
             <span class="tech-tag">Database: MongoDB</span>
           </div>
@@ -1554,13 +1573,15 @@
             <a
               href="https://github.com/Parthnagar24/Full-Stack---Zziggy-Food-Delivery-App"
               target="_blank"
-              >🔗 Github Repo</a
+              >🔗 GitHub</a
             >
-            <a href="" target="_blank">🚀 Live Demo</a>
+            <a href="" target="_blank">🔗 Visit Site</a>
           </div>
         </div>
+
+        <!-- Project 5 -->
         <div class="project-card">
-            <img src="images/js.png" alt="">
+          <img src="images/js.png" alt="JavaScript Projects" />
           <h3>JavaScript Projects Collection</h3>
           <p>
             A set of 10 small, interactive JavaScript projects for learning and
@@ -1578,14 +1599,14 @@
             <a
               href="https://github.com/Parthnagar24/4-JavaScript-Projects"
               target="_blank"
-              >🔗 Github Repo</a
+              >🔗 GitHub</a
             >
-            <p>Visit the repository for all project demos (10 projects)</p>
           </div>
         </div>
 
+        <!-- Project 6 -->
         <div class="project-card">
-            <img src="images/url.png" alt="">
+          <img src="images/url.png" alt="URL Shortener" />
           <h3>📦 URL Shortener Server Backend</h3>
           <p>
             A robust backend service for a URL shortening application, designed
@@ -1601,13 +1622,44 @@
             <span class="tech-tag">pnpm</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Parthnagar24/URL-Shortener-Server-BackEnd" target="_blank">🔗 Github Repo</a>
-            
+            <a
+              href="https://github.com/Parthnagar24/URL-Shortener-Server-BackEnd"
+              target="_blank"
+              >🔗 GitHub</a
+            >
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project-card">
+          <img src="images/image.png" alt="Paytm Clone" />
+          <h3>Paytm Clone Website</h3>
+          <p>
+            A responsive Paytm-style web app that simulates seamless UPI,
+            wallet, and bill-payment flows. Clean UI, mobile-first layout, and
+            realistic transaction mockups for demoing payment features.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">Tailwind</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/Parthnagar24/Paytm-Clone"
+              target="_blank"
+              >🔗 GitHub</a
+            >
+            <a
+              href="https://parthnagar24.github.io/Paytm-Clone/"
+              target="_blank"
+              >🔗 Visit Site</a
+            >
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Social Links Section -->
     <section id="social" class="social-section">
       <div class="section-title-wrapper">
         <h2 class="gradient-underline">Let's Connect</h2>
@@ -1626,7 +1678,7 @@
           <div class="social-handle">Parthnagar24</div>
         </a>
         <a
-          href="www.linkedin.com/in/parth-nagar-66b674278"
+          href="https://www.linkedin.com/in/parth-nagar-66b674278"
           target="_blank"
           class="social-link"
         >
@@ -1646,7 +1698,6 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
       <div class="section-title-wrapper">
         <h2 class="gradient-underline">Get In Touch</h2>
@@ -1659,17 +1710,98 @@
           I'm always open to discussing new projects, creative ideas, or
           opportunities to be part of your vision.
         </p>
-        <a href="parthnagar2406@gmail.com">📧parthnagar2406@gmail.com</a>
+
+        <a href="mailto:parthnagar2406@gmail.com"
+          >📧 parthnagar2406@gmail.com</a
+        >
+
+        <div class="social-links">
+          <a href="https://github.com/Parthnagar24" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-github"
+            >
+              <path d="M15 22s-4 0-5 2C8 17 6 16 6 16" />
+              <path d="M10 14c0 .5-.7 1-1.5 1S7 14.5 7 14" />
+              <path d="M17 14c0 .5-.7 1-1.5 1S14 14.5 14 14" />
+              <path d="M8 8a3 3 0 0 1 4 0v4" />
+              <path d="M12 8a3 3 0 0 1 4 0v4" />
+              <path
+                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12
+                   c0 4.42 2.87 8.17 6.81 9.49 1.15.21 1.57-.5
+                   1.57-1.07v-3.79c-2.78.6-3.37-1.34-3.37-1.34
+                   -.45-1.15-1.1-1.46-1.1-1.46-.91-.62.07-.6.07-.6
+                   1 .07 1.53 1.03 1.53 1.03.88 1.5 2.3 1.07 2.86.82
+                   .09-.64.34-1.07.61-1.32-2.18-.23-4.47-1.09-4.47-4.85
+                   0-1.07.38-1.94 1.03-2.62-.1-.23-.45-1.23.1-2.58
+                   0 0 .84-.26 2.75 1.0A9.28 9.28 0 0 1 12 6.8
+                   c.84 0 1.69.11 2.5.32 1.91-1.26 2.75-1.0 2.75-1.0
+                   .55 1.35.2 2.35.1 2.58.65.68 1.03 1.55 1.03 2.62
+                   0 3.76-2.3 4.62-4.48 4.85.35.3.67.93.67 1.88v2.73
+                   c0 .59.42 1.3 1.57 1.07C19.13 20.17 22 16.42 22 12z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/parth-nagar-66b674278"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-linkedin"
+            >
+              <path d="M16 8a6 6 0 0 0-6 6v7H6v-7a6 6 0 0 1 6-6h4z" />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+
+          <a
+            href="https://unstop.com/mentor/ParthNagar?ref=c3u3ilfV"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-graduation-cap"
+            >
+              <path
+                d="M22 10v6M12 15l-4-4-4 4M2 12V6a2 2 0 0 1 2-2h16a2
+                   2 0 0 1 2 2v6"
+              />
+              <path d="M12 15V4" />
+              <path d="M2 12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- Unstop Mentor Badge -->
     <div class="mentor-badge" onclick="openPopup()">🎓 Unstop Mentor</div>
 
-    <!-- Scroll to Top Button -->
     <button class="scroll-top" id="scrollTop">↑</button>
 
-    <!-- Unstop Popup -->
     <div class="popup-overlay" id="mentorPopup">
       <div class="popup-content">
         <span class="popup-close" onclick="closePopup()">&times;</span>
@@ -1683,13 +1815,14 @@
           <strong>Specializations:</strong> Web Development, Career Guidance,
           Technical Interviews
         </p>
-        <a href="https://unstop.com/mentor/ParthNagar?ref=c3u3ilfV" target="_blank"
+        <a
+          href="https://unstop.com/mentor/ParthNagar?ref=c3u3ilfV"
+          target="_blank"
           >Visit My Unstop Profile →</a
         >
       </div>
     </div>
 
-    <!-- Footer -->
     <footer>
       <div class="footer-content">
         <div class="footer-section">
@@ -1712,18 +1845,21 @@
               >
             </li>
             <li>
-              <a href="www.linkedin.com/in/parth-nagar-66b674278" target="_blank"
+              <a
+                href="https://www.linkedin.com/in/parth-nagar-66b674278"
+                target="_blank"
                 >🔗 LinkedIn</a
               >
             </li>
             <li>
-              <a href="https://unstop.com/mentor/ParthNagar?ref=c3u3ilfV" target="_blank"
+              <a
+                href="https://unstop.com/mentor/ParthNagar?ref=c3u3ilfV"
+                target="_blank"
                 >🎓 Unstop</a
               >
             </li>
           </ul>
         </div>
-        
       </div>
       <div class="footer-bottom">
         <p>© 2025 Parth Nagar. • All rights reserved</p>
